@@ -19,6 +19,8 @@
         increment:function () {
           //this.num++;
           this.$emit("incre");//间接触发父组件的函数,子组件向父组件传值
+
+          import('./../util');//异步加载。
         },
         decrement:function () {
           //this.num--;

@@ -2,10 +2,12 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
-
+import {router} from './router'
+// import * as util from "./util"
 Vue.config.productionTip = false
 
+// console.log(`sum:${util.sum(1,6)}`);
+// console.log(`miuns:${util.miuns(10,2)}`);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -13,3 +15,15 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+// define('util',function () {
+//   return {
+//     sum:function () {
+//
+//     },
+//     miuns:function () {
+//
+//     }
+//   }
+// })

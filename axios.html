@@ -66,8 +66,8 @@
       http:function () {
           axios({
             url:"package.json",
-            method:"post",
-            data:{
+            method:"get",
+            params:{
               userId:"456"
             },
             headers:{

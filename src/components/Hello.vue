@@ -1,15 +1,15 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <countter v-bind:num="num" v-on:incre="increment" v-on:decre="decrement"></countter><!--?????????-->
+    <countter v-bind:num="num" v-on:incre="increment" v-on:decre="decrement"></countter>
     <p>parent:{{num}}</p>
   </div>
 </template>
 
 <script>
-  import Countter from './test'  //?????test
+  import Countter from './Counter'
 export default {
-  name: 'HelloWorld',
+  name: 'Hello',
   data () {
     return {
       num:10,
@@ -17,7 +17,7 @@ export default {
     }
   },
   components:{
-    Countter   //?????
+    Countter
   },
   methods:{
     increment:function () {
