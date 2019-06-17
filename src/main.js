@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import {router} from './router'
+import VueLayzLoad from 'vue-lazyload'
 // import * as util from "./util"
 Vue.config.productionTip = false
-
+Vue.use(VueLayzLoad,{
+  loading:"../static/loading/loading-bars.svg"
+})
 // console.log(`sum:${util.sum(1,6)}`);
 // console.log(`miuns:${util.miuns(10,2)}`);
 /* eslint-disable no-new */
