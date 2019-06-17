@@ -8,7 +8,7 @@ http.get('http://www.imooc.com/u/card',function (res) {
   res.on("data",function (chunk) {
     data += chunk;
   });
-  //监听end数据
+  //监听end数据23
   res.on("end",function () {
     let new_data = data.substring(14,data.length-1);
     //console.log("data:" + result);
