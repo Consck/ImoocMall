@@ -19,7 +19,7 @@
                 <dt>Price:</dt>
                 <dd><a href="javascript:void(0)" v-bind:class="{'cur':priceChecked=='all'}" @click="priceChecked='all'">All</a></dd>
                 <dd v-for="(price,index) in priceFilter" >
-                  <a href="javascript:void(0)" @click="setPriceFilter(index)" v-bind:class="{'cur':priceChecked=='index'}">{{price.startPrice}} - {{price.endPrice}}</a>
+                  <a href="javascript:void(0)" @click="setPriceFilter(index)" v-bind:class="{'cur':priceChecked==index}">{{price.startPrice}} - {{price.endPrice}}</a>
                 </dd>
               </dl>
             </div>
@@ -76,7 +76,7 @@
                 }
               ],
               priceChecked:'all',
-              filterBy:false,
+              filterBy:false,   //遮罩
               overLayFlag:false
             }
         },
@@ -102,7 +102,7 @@
           },
         setPriceFilter(index){
           this.priceChecked = index;
-          this.closePop()
+          this.closePop();
         },
         closePop(){
           this.filterBy = false;
