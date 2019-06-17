@@ -34,7 +34,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
     before(app) {
       app.get('/goods', (req, res) => {
-        res.json(res.json(goodsData))
+        res.json(goodsData)
     });
     },
 
